@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ApplicationException</members>
+        <members>LookupController</members>
+        <members>LookupControllerTest</members>
+        <members>LookupQueryConfiguration</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Remove_Selected_Option</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
+        <members>lookup</members>
+        <members>toastNotification</members>
+        <members>utils</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <version>50.0</version>
+</Package>
