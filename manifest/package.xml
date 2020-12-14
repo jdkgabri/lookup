@@ -8,6 +8,7 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Error_Finding_Records</members>
         <members>Remove_Selected_Option</members>
         <name>CustomLabel</name>
     </types>
