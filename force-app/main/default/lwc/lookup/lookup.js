@@ -25,7 +25,6 @@ export default class Lookup extends LightningElement {
     @api tooltipInfo;
     @api placeholder;
     @api required;
-    @api filterId;
     @api objectName = 'Account';
     @api searchField = 'Name';
     @api extraFilterType;
@@ -150,8 +149,7 @@ export default class Lookup extends LightningElement {
         const selectedRecordEvent = new CustomEvent('selectlookupchange', {
             detail: {
                 recordId: selectedRecordId,
-                recordName: this._selectedRecord.Name,
-                filterId: this.filterId
+                recordName: this._selectedRecord.Name
             }
         });
         this.dispatchEvent(selectedRecordEvent);
@@ -165,8 +163,7 @@ export default class Lookup extends LightningElement {
         const selectedRecordEvent = new CustomEvent('selectlookupchange', {
             detail: {
                 recordId: undefined,
-                recordName: undefined,
-                filterId: this.filterId
+                recordName: undefined
             }
         });
         this.dispatchEvent(selectedRecordEvent);

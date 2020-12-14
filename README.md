@@ -1,22 +1,126 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Lookup LWC
+Custom lightning web component of a Lookup.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Introduction
+If the Salesforce standard component `Related List - Single` does not much your requirements, you may find this component useful.
+This component aims to allow Salesforce admins and Developers to further customize their lists and leverage the usage of additional functionalities.
 
-## How Do You Plan to Deploy Your Changes?
+## Table of contents
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Configurations](#configurations)
+- [Tests](#tests)
+- [Credits](#credits)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Configure Your Salesforce DX Project
+## Installation
+The content of this repository is available for installation as an Unlocked Package with [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1t000003Y8gTAAS).
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Usage
+This component is available for programmatic usage within a parent component.
 
-## Read All About It
+## Examples
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+![lookup](/img/lookup.PNG)
 
+## Configurations
 
-## Unlocked package installation URL
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1t000003Y8gTAAS
+The component leverages the following configurations:
+
+    @api iconName = 'standard:choice';
+    @api mode = this.modes.FIND;
+    @api valueMap;
+    @api lookupLabel = '';
+    @api tooltipInfo;
+    @api placeholder;
+    @api required;
+    @api filterId;
+    @api objectName = 'Account';
+    @api searchField = 'Name';
+    @api extraFilterType;
+    @api filterFormattingParameters;
+
+* `icon-name`
+    - Description: Provide an icon for the lookup options.
+    - Type: String
+    - Required: false
+    - Default: standard:choice
+
+* `mode`
+    - Description: Specify what to display in the lookup dropdown, whether "findRecords" to retrieve options with a SOQL query or "getValues" to display them from a provided list of options.
+    - Type: String
+    - Required: false
+    - Default: findRecords
+
+* `value-map`
+    - Description: Provided list of possible dropdown options for the "getValues" mode.
+    - Type: Array of objects
+    - Required: false
+    - Default: NA
+
+* `lookup-label`
+    - Description: Label to display for the lookup element.
+    - Type: String
+    - Required: false
+    - Default: NA
+
+* `tooltip-info`
+    - Description: Help text to display for the lookup element.
+    - Type: String
+    - Required: false
+    - Default: NA
+
+* `placeholder`
+    - Description: Placeholder to display for the lookup element.
+    - Type: String
+    - Required: false
+    - Default: NA
+
+* `required`
+    - Description: Whether to show the lookup element as required.
+    - Type: Boolean
+    - Required: false
+    - Default: false
+
+* `object-name`
+    - Description: Object api name of the records to be searched.
+    - Type: String
+    - Required: false
+    - Default: Account
+
+* `search-field`
+    - Description: Field by which the records will be searched.
+    - Type: String
+    - Required: false
+    - Default: Name
+
+* `extra-filter-type`
+    - Description: Additional filter to apply to the SOQL query when searching the records.
+    - Type: String
+    - Required: false
+    - Default: NA
+
+* `filter-formatting-parameters`
+    - Description: List of dynamic parameters to apply to the extra filter clause.
+    - Type: Array of objects
+    - Required: false
+    - Default: NA
+
+## Tests
+This projects leverages Apex Tests for the testing of Apex Classes. Jest Test for Lightning Web Components will be added soon.
+
+## Credits
+
+- **Mert Yalti** - Developer - [DevKein](https://github.com/DevKein)
+- **Gabriel Serrano** - Developer - [jdkgabri](https://github.com/jdkgabri)
+
+## Contributing
+Contributions are what make the trailblazer community such an amazing place. I regard this component as a way to inspire and learn from others. Any contributions you make are greatly appreciated.
+
+See [CONTRIBUTING.md](/CONTRIBUTING.md) for contribution principles.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](/LICENSE.md) file for details.
