@@ -2,8 +2,7 @@
 Custom lightning web component of a Lookup.
 
 ## Introduction
-If the Salesforce standard component `Related List - Single` does not much your requirements, you may find this component useful.
-This component aims to allow Salesforce admins and Developers to further customize their lists and leverage the usage of additional functionalities.
+This component aims to provide a configurable lookup element to be used in a parent component.
 
 ## Table of contents
 
@@ -29,19 +28,6 @@ This component is available for programmatic usage within a parent component.
 ## Configurations
 
 The component leverages the following configurations:
-
-    @api iconName = 'standard:choice';
-    @api mode = this.modes.FIND;
-    @api valueMap;
-    @api lookupLabel = '';
-    @api tooltipInfo;
-    @api placeholder;
-    @api required;
-    @api filterId;
-    @api objectName = 'Account';
-    @api searchField = 'Name';
-    @api extraFilterType;
-    @api filterFormattingParameters;
 
 * `icon-name`
     - Description: Provide an icon for the lookup options.
