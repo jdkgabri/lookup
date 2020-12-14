@@ -16,7 +16,7 @@ This component aims to provide a configurable lookup element to be used in a par
 - [License](#license)
 
 ## Installation
-The content of this repository is available for installation as an Unlocked Package with [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1t000003Y8gTAAS).
+The content of this repository is available for installation as an Unlocked Package with [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1t000003Y8gsAAC).
 
 ## Usage
 This component is available for programmatic usage within a parent component.
