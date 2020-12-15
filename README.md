@@ -23,7 +23,7 @@ This component is available for programmatic usage within a parent component.
 
 ## Examples
 
-![lookup](/img/lookup.PNG)
+![lookup](./img/lookup.PNG)
 
 ## Configurations
 
@@ -35,11 +35,15 @@ The component leverages the following configurations:
     - Required: false
     - Default: standard:choice
 
+<p>&nbsp;</p>
+
 * `mode`
     - Description: Specify what to display in the lookup dropdown, whether "findRecords" to retrieve options with a SOQL query or "getValues" to display them from a provided list of options.
     - Type: String
     - Required: false
     - Default: findRecords
+
+<p>&nbsp;</p>
 
 * `value-map`
     - Description: Provided list of possible dropdown options for the "getValues" mode.
@@ -47,11 +51,15 @@ The component leverages the following configurations:
     - Required: false
     - Default: NA
 
+<p>&nbsp;</p>
+
 * `lookup-label`
     - Description: Label to display for the lookup element.
     - Type: String
     - Required: false
     - Default: NA
+
+<p>&nbsp;</p>
 
 * `tooltip-info`
     - Description: Help text to display for the lookup element.
@@ -59,11 +67,15 @@ The component leverages the following configurations:
     - Required: false
     - Default: NA
 
+<p>&nbsp;</p>
+
 * `placeholder`
     - Description: Placeholder to display for the lookup element.
     - Type: String
     - Required: false
     - Default: NA
+
+<p>&nbsp;</p>
 
 * `required`
     - Description: Whether to show the lookup element as required.
@@ -71,11 +83,15 @@ The component leverages the following configurations:
     - Required: false
     - Default: false
 
+<p>&nbsp;</p>
+
 * `object-name`
     - Description: Object api name of the records to be searched.
     - Type: String
     - Required: false
     - Default: Account
+
+<p>&nbsp;</p>
 
 * `search-field`
     - Description: Field by which the records will be searched.
@@ -83,11 +99,15 @@ The component leverages the following configurations:
     - Required: false
     - Default: Name
 
+<p>&nbsp;</p>
+
 * `extra-filter-type`
     - Description: Additional filter to apply to the SOQL query when searching the records.
     - Type: String
     - Required: false
     - Default: NA
+
+<p>&nbsp;</p>
 
 * `filter-formatting-parameters`
     - Description: List of dynamic parameters to apply to the extra filter clause.
